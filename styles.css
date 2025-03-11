@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Playfair Display;
+    color: rgb(101, 0, 0);
+    background-image: url('images/bg.jpg'); /* Replace with your image file name */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+}
+
+.background-image {
+    position: fixed;
+    background-repeat: repeat;
+    background-size: auto;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Ensure the background is behind other content */
+}
+
+.content {
+    position: relative;
+    text-align: left;
+    padding: 20px;
+    z-index: 1;
+    max-width: 800px; /* Limit the width of the text area */
+    margin: auto; /* Center the content */
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 5em; /* Increase the size of the header */
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+}
+
+.summary {
+    font-size: 1.2em; /* Adjust the font size for the summary */
+    margin-bottom: 20px; /* Space below the summary */
+    text-align: center; /* Center the summary text */
+    line-height: 1.5; /* Improve readability */
+}
+
+.text-image-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space between image-text containers */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for lift effect */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    padding: 10px; /* Optional: Add some padding */
+}
+
+.side-image {
+    max-width: 45%; /* Limit the image width */
+    margin: 0 10px; /* Space around images */
+}
+
+.text-image-container p {
+    flex: 1; /* Allow the paragraph to take the remaining space */
+    font-size: 1.5em; /* Default font size for mobile */
+    line-height: 1.4; /* Improve readability */
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+    .text-image-container p {
+        font-size: 4em; /* Increase font size for larger screens */
+    }
+
+    .summary {
+        font-size: 2em; /* Increase summary font size for larger screens */
+    }
+}
